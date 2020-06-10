@@ -1,0 +1,36 @@
+@use "sass:meta";
+@use "sass:color";
+
+@mixin syntax-colors($colors...) {
+    @each $name, $color in meta.keywords($colors) {
+        .#{$name}, .el-button--#{$name}:not(.is-plain){
+            background-color: $color !important;
+            border-color: $color !important;
+        }
+        .el-button--#{$name}:not(.is-plain){
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: white;
+            
+            &:hover{
+                background-color: color.adjust($color, $lightness: +8%,) !important;
+            }
+        }
+        .el-button--#{$name}.is-plain{
+            border-color: $color !important;
+            font-weight: bold;
+            letter-spacing: 1px;
+            background: white;
+            color: $color !important;
+         
+            &:hover{
+                background-color: $color !important;
+                color: white !important;
+            }
+        }
+        
+        .#{$name}--text, .el-button.#{$name}--text{
+            color: $color !important;
+        }
+    }
+}

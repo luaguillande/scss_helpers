@@ -1,0 +1,20 @@
+{
+  "name": "@luaguillande/scss_helpers",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "scss",
+    "sass",
+    "css",
+    "helpers",
+    "libscss",
+    "style"
+  ]
+  
+}

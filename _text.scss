@@ -1,0 +1,19 @@
+@use "sass:meta";
+
+$alignList: center, left, right;
+
+@mixin align($align...) {
+    @each $name in $align {
+        .text-#{$name}{
+            text-align: $name;
+        }
+    }
+}
+
+@include align($alignList...);
+
+
+.wrap{
+    flex-wrap: wrap;
+}
+

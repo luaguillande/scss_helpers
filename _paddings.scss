@@ -1,0 +1,67 @@
+// padding All responsivo
+
+@mixin type($types...) {
+    @each $type in $types {
+        @content($type);
+    }
+}
+
+@include type(pa, py, px, pl, pr, pt, pb) using ($type) {
+    @for $i from 1 through 24 {
+        
+        $value: calc(#{$i * 2}px + #{$i * .1}vw) !important;
+        $pt: padding-top;
+        $pb: padding-bottom;
+        $pl: padding-left;
+        $pr: padding-right;
+        
+        .#{$type}-#{$i}{
+            @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+            @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+            @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+            @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+        }
+        
+        .#{$type}-xs-#{$i}{
+            @media (max-width: 420px){ 
+                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+            } 
+        }
+        .#{$type}-sm-#{$i}{
+            @media (max-width: 800px){ 
+                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+            } 
+        }
+        .#{$type}-md-#{$i}{
+            @media (max-width: 1025px){ 
+                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+            } 
+        }
+        .#{$type}-lg-#{$i}{
+            @media (max-width: 1601px){ 
+                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+            } 
+        }
+        .#{$type}-xl-#{$i}{
+            @media (min-width: 1601px){ 
+                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
+                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
+                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
+                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
+            } 
+        }
+        
+    }
+}
