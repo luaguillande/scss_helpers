@@ -1,9 +1,7 @@
 # Scss Helpers Library 
 
-  Scss Helpers Lbrary is a toolkit of mixins and classes designated to help you to style your SCSS;
+  Scss Helpers Lbrary is a toolkit of mixins and classes designated to help you to style your SCSS.
 
-  
-    
       
 ## Quick start guide
   
@@ -31,7 +29,7 @@
       @import '~@luaguillande/scss_helpers/all';
   ```
 
-## 3 Set your colors
+## 3. Set your colors
 
   Set the theme in `app.scss`. You also can create new class names by changing the variable name.
 
@@ -47,7 +45,7 @@
     )
   ```
 
-## 4 Use the classes in your html
+## 4. Use the classes in your html
 
   ```bash
     <div class="primary-text secondary pa-5 mx-10 my-3">My Div</div>
@@ -166,6 +164,6 @@ nothing | Aplies in all devices
   ```
   
 
-## Enjoy.
+## Enjoy!
 
   @luaguillande - 31solutions.com

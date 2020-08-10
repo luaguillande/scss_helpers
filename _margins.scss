@@ -1,69 +1,44 @@
 // margin All responsivo
 
-@mixin type($types...) {
-    @each $type in $types {
-        @content($type);
+@mixin type($media, $types...) {
+    @each $type in $typesList {
+        @for $i from 0 through 24 {
+            
+            $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
+            $mt: margin-top;
+            $mb: margin-bottom;
+            $ml: margin-left;
+            $mr: margin-right;
+            
+            .#{$type}-#{$media}-#{$i}{
+                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
+                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
+                @if $type == ma or $type == mb or $type == mx{#{$mb}: $value;}
+                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
+            }
+        }
     }
 }
 
+$typesList: ma, my, mx, ml, mr, mt, mb;
 
-@include type(ma, my, mx, ml, mr, mt, mb) using ($type) {
-    @for $i from 1 through 24 {
-        
-        $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
-        $mt: margin-top;
-        $mb: margin-bottom;
-        $ml: margin-left;
-        $mr: margin-right;
-        
-        
-        .#{$type}-#{$i}{
-            @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-            @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-            @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-            @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-        }
-        
-        .#{$type}-xs-#{$i}{
-            @media (max-width: 420px){ 
-                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-            } 
-        }
-        .#{$type}-sm-#{$i}{
-            @media (max-width: 800px){ 
-                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-            } 
-        }
-        .#{$type}-md-#{$i}{
-            @media (max-width: 1025px){ 
-                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-            } 
-        }
-        .#{$type}-lg-#{$i}{
-            @media (max-width: 1601px){ 
-                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-            } 
-        }
-        .#{$type}-xl-#{$i}{
-            @media (min-width: 1601px){ 
-                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
-                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
-                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
-            } 
-        }
-        
-    }
+
+@media (max-width: 1025px){ 
+    @include type(md, $typesList...)
+}
+
+@media (max-width: 800px){ 
+    @include type(sm, $typesList...)
+} 
+
+@media (max-width: 420px){ 
+    @include type(xs, $typesList...)
+} 
+
+@media (min-width: 1601px){ 
+    @include type(xl, $typesList...)
+}
+
+@media (max-width: 1601px){ 
+    @include type(lg, $typesList...)
 }

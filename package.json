@@ -1,13 +1,13 @@
 {
   "name": "@luaguillande/scss_helpers",
-  "version": "1.1.1",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.3",
+  "description": "Scss Helpers Lbrary is a toolkit of mixins and classes designated to help you to style your SCSS.",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Luana Guillande",
+  "license": "MIT",
   "keywords": [
     "scss",
     "sass",
@@ -15,6 +15,10 @@
     "helpers",
     "libscss",
     "style"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luaguillande/scss_helpers"
+  }
   
 }
