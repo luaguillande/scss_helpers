@@ -51,17 +51,6 @@
   ```bash
     <div class="primary-text secondary pa-5 mx-10 my-3">My Div</div>
   ```
-<br><br>
-
-
-You can also use 5 lighter and darker color variables automatically generated from your theme.
-
-<br>
-
-  ```bash
-    <div class="primary-lighten-1--text secondary--darken-3">My Div</div>
-  ```
-<br><br>
 
 ## 5. Classes List
 
@@ -141,20 +130,16 @@ nothing | Aplies in all devices
   ```bash
     <div class="primary white--text">My Div</div>
   ```
-  
-  You also can create new class names by changing the variable name.
+      
+  You can also use 5 lighter and darker color variables automatically generated from your theme.
 
-  ```bash
-    @include syntax-colors(
-        $primary:  #F9CD16,
-        $secondary: #3C3C3B,
-        $error: #ff5d48,
-        $white: #ffffff,
-        $black: #000000,
-        $info: #818181,
-        $softgrey: #EDEDED,
-    )
-  ```
+  <br>
+
+    ```bash
+      <div class="primary-lighten-1--text secondary--darken-3">My Div</div>
+    ```
+  <br><br>
+
 
 ## Align Text
 
