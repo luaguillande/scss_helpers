@@ -135,9 +135,9 @@ nothing | Aplies in all devices
 
   <br>
 
-    ```bash
-      <div class="primary-lighten-1--text secondary--darken-3">My Div</div>
-    ```
+  ```bash
+    <div class="primary-lighten-1--text secondary--darken-3">My Div</div>
+  ```
   <br><br>
 
 
