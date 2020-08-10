@@ -206,26 +206,26 @@ Use the `class="flex"` to apply the `display:flex` style.
 Wrapping
 
   Class | Property | Details
---- | --- 
+--- | --- | --- 
 `wrap` | `flex-wrap: wrap` | breaks child elements into new lines when space runs out
 `no-wrap` | `flex-wrap: nowrap` | keeps child elements on the same line, even if there is no space
-<br><br>
+
 <br><br>
 
 Vertical Align
 
   Class | Property | Details
---- | --- 
+--- | --- | --- 
 `align-center` | `align-items: center` | vertically centers the child element
 `align-flex-end` | `align-items: flex-end` | aligns the child element at the end of the parent element
 `align-stretch` | `align-items: stretch` | vertically distribute the child elements
-<br><br>
+
 <br><br>
 
 Horizontal Align
 
   Class | Property | Details
---- | --- 
+--- | --- | --- 
 `justify-center` | `justify-items: center` | horizontally centers the child element
 `justify-end` | `justify-items: end` | horizontally aligns the child element at the end of the parent element
 `justify-space-between` | `justify-items: space-between` | horizontally distribute the child elements
