@@ -1,0 +1,36 @@
+
+.flex{
+    display: flex;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.no-wrap{
+    flex-wrap: nowrap;
+}
+
+$justifyList: space-between, end, center, space-around;
+
+@mixin justify($justify...) {
+    @each $name in $justify {
+        .justify-#{$name}{
+            justify-content: $name;
+        }
+    }
+}
+
+@include justify($justifyList...);
+
+
+$alignList: center, flex-end, stretch;
+
+@mixin align($align...) {
+    @each $name in $align {
+        .align-#{$name}{
+            align-items: $name;
+        }
+    }
+}
+
+@include align($alignList...);
+

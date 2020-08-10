@@ -1,19 +1,20 @@
 // margin All responsivo
 
+$mt: margin-top;
+$mb: margin-bottom;
+$ml: margin-left;
+$mr: margin-right;
+
 @mixin type($media, $types...) {
     @each $type in $typesList {
         @for $i from 0 through 24 {
             
             $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
-            $mt: margin-top;
-            $mb: margin-bottom;
-            $ml: margin-left;
-            $mr: margin-right;
-            
+
             .#{$type}-#{$media}-#{$i}{
                 @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
                 @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
-                @if $type == ma or $type == mb or $type == mx{#{$mb}: $value;}
+                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
                 @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
             }
         }
@@ -22,6 +23,25 @@
 
 $typesList: ma, my, mx, ml, mr, mt, mb;
 
+
+@mixin geral($types...) {
+    @each $type in $typesList {
+        
+        @for $i from 0 through 24 {
+            
+            $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
+            
+            .#{$type}-#{$i}{
+                @if $type == ma or $type == mt or $type == my {#{$mt}: $value;}
+                @if $type == ma or $type == mb or $type == my {#{$mb}: $value;}
+                @if $type == ma or $type == ml or $type == mx{#{$ml}: $value;}
+                @if $type == ma or $type == mr or $type == mx{#{$mr}: $value;}
+            }
+        }
+    }
+}
+
+@include geral($typesList...);
 
 @media (max-width: 1025px){ 
     @include type(md, $typesList...)

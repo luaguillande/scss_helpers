@@ -1,36 +1,42 @@
 @use "sass:meta";
 @use "sass:color";
 
-@mixin syntax-colors($colors...) {
+@mixin colors($colors...) {
     @each $name, $color in meta.keywords($colors) {
-        .#{$name}, .el-button--#{$name}:not(.is-plain){
+        .#{$name}{
             background-color: $color !important;
-            border-color: $color !important;
         }
-        .el-button--#{$name}:not(.is-plain){
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: white;
+        
+        
+        .#{$name}--text{
+            color: $color !important;
+        }
+        
+        //lighten
+        @for $i from 1 through 5{
             
-            &:hover{
-                background-color: color.adjust($color, $lightness: +8%,) !important;
+            .#{$name}-lighten-#{$i}{
+                background-color:  lighten($color, $i*12%) !important;
+            }
+            
+            
+            .#{$name}-lighten-#{$i}--text{
+                color:  lighten($color, $i*12%) !important;
             }
         }
-        .el-button--#{$name}.is-plain{
-            border-color: $color !important;
-            font-weight: bold;
-            letter-spacing: 1px;
-            background: white;
-            color: $color !important;
-         
-            &:hover{
-                background-color: $color !important;
-                color: white !important;
+
+        //darken
+        @for $i from 1 through 5{
+            
+            .#{$name}-darken-#{$i}{
+                background-color:  darken($color, $i*12%) !important;
+            }
+            
+            
+            .#{$name}-darken-#{$i}--text{
+                color:  darken($color, $i*12%) !important;
             }
         }
         
-        .#{$name}--text, .el-button.#{$name}--text{
-            color: $color !important;
-        }
     }
 }
