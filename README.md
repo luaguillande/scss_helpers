@@ -19,6 +19,7 @@
   ```bash
     @import '~@luaguillande/scss_helpers/_text';
     @import '~@luaguillande/scss_helpers/_colors';
+    @import '~@luaguillande/scss_helpers/_display';
     @import '~@luaguillande/scss_helpers/_flexbox';
     @import '~@luaguillande/scss_helpers/_paddings';
     @import '~@luaguillande/scss_helpers/_margins';
@@ -192,6 +193,27 @@ nothing | Aplies in all devices
 `font-700`| `font-weight: 700`
 `font-800`| `font-weight: 800`
 `font-900`| `font-weight: 900`
+
+## Display by Device
+
+Classes to change the `display` property. Use `d-{device}-{value}` 
+
+ Class | Attribute | Device 
+--- | --- | --- 
+`d-none` | `display: none` | all devices
+`d-block` | `display: block` | all devices
+`d-flex` | `display: flex` | all devices
+`d-{device}-none` | `display: none` | apply media query
+`d-{device}-block` | `display: block` | apply media query
+`d-{device}-flex` | `display: flex` | apply media query
+
+  Property | Media Query
+--- | --- 
+`xs` | `max-width  420px`
+`sm` | `min-width  421px`
+`md` | `min-width 800px`
+`lg` | `min-width 1025px`
+`xl` | `min-width 1601px`
 
 
   

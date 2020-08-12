@@ -11,7 +11,7 @@ $pr: padding-right;
             
             $value: calc(#{$i * 2}px + #{$i * .1}vw) !important;
             
-            .#{$type}-#{$media}-#{$i}{
+            .#{$type}#{$media}#{$i}{
                 @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
                 @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
                 @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
@@ -23,41 +23,26 @@ $pr: padding-right;
 
 $typesList: pa, py, px, pl, pr, pt, pb;
 
-@mixin geral($types...) {
-    @each $type in $typesList {
-        
-        @for $i from 0 through 24 {
-            
-            $value: calc(#{$i * 1.5}px + #{$i * .15}vw) !important;
-             
-            .#{$type}-#{$i}{
-                @if $type == pa or $type == pt or $type == py {#{$pt}: $value;}
-                @if $type == pa or $type == pb or $type == py {#{$pb}: $value;}
-                @if $type == pa or $type == pl or $type == px{#{$pl}: $value;}
-                @if $type == pa or $type == pr or $type == px{#{$pr}: $value;}
-            }
-        }
-    }
-}
-
-@include geral($typesList...);
-
-@media (max-width: 1025px){ 
-    @include type(md, $typesList...)
-}
-
-@media (max-width: 800px){ 
-    @include type(sm, $typesList...)
-} 
+@include type('-', $typesList...);
 
 @media (max-width: 420px){ 
-    @include type(xs, $typesList...)
+    @include type('-xs-', $typesList...)
 } 
 
-@media (min-width: 1601px){ 
-    @include type(xl, $typesList...)
-}
+@media (min-width: 421px){ 
+    @include type('-sm-', $typesList...)
+} 
 
-@media (max-width: 1601px){ 
-    @include type(lg, $typesList...)
-}
+@media (min-width: 800px){ 
+    @include type('-md-', $typesList...)
+}    
+
+@media (min-width: 1025px){ 
+    @include type('-lg-', $typesList...)
+}        
+
+@media (min-width: 1601px){ 
+    @include type('-xl-', $typesList...)
+}            
+
+
