@@ -193,10 +193,12 @@ nothing | Aplies in all devices
 `font-700`| `font-weight: 700`
 `font-800`| `font-weight: 800`
 `font-900`| `font-weight: 900`
+<br><br>
 
 ## Display by Device
 
 Classes to change the `display` property. Use `d-{device}-{value}` 
+<br><br>
 
  Class | Attribute | Device 
 --- | --- | --- 
@@ -206,6 +208,7 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `d-{device}-none` | `display: none` | apply media query
 `d-{device}-block` | `display: block` | apply media query
 `d-{device}-flex` | `display: flex` | apply media query
+<br><br>
 
   Property | Media Query
 --- | --- 
@@ -216,6 +219,14 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `xl` | `min-width 1601px`
 
 
+<br><br>
+
+  Example:
+
+  ```bash
+    <div class="d-xs-none d-sm-flex">My Div</div>
+  ```
+  
   
 ## FlexBox
 
