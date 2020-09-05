@@ -9,7 +9,7 @@
     flex-wrap: nowrap;
 }
 
-$justifyList: space-between, end, center, space-around;
+$justifyList: space-between, flex-end, center, space-around;
 
 @mixin justify($justify...) {
     @each $name in $justify {
