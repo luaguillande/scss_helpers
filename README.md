@@ -33,18 +33,30 @@
 
 ## 3. Set your colors
 
-  Set the theme in `app.scss` (or the file where your are importing the library). You also can create new class names by changing the variable name.
+  Set the theme in a `_color_set.scss` then map the colors in the @include in the `app.scss` (or the file where your are importing the library). You also can create new class names by changing the variable name. Now you wil be able to use the variables in other scss files importing the `_color_set` file and also use like classes in your html.
 
-  ```bash
+
+  ```scss
+    //_color_set.scss
+
+    $primary:  #f9cd16;
+    $secondary: #3C3C3B;
+    $error: #ff5d48;
+    // ...
+
+  ```
+
+
+  ```scss
+    //app.scss
+    
     @include colors(
-        $primary:  #F9CD16,
-        $secondary: #3C3C3B,
-        $error: #ff5d48,
-        $white: #ffffff,
-        $black: #000000,
-        $info: #818181,
-        $softgrey: #EDEDED,
+        $primary:  $primary,
+        $secondary: $secondary,
+        $error: $error,
+        // ...
     )
+
   ```
 
 ## 4. Use the classes in your html
@@ -141,6 +153,18 @@ nothing | Aplies in all devices
   ```
   <br><br>
 
+  In scss files:
+
+  ```scss
+  @import '_color_set.scss
+
+    .my-class{
+      color: $primary,
+      border 1px solid $secondary
+      background-color: $error
+    }
+```
+
 
 ## Align Text
 
@@ -205,9 +229,11 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `d-none` | `display: none` | all devices
 `d-block` | `display: block` | all devices
 `d-flex` | `display: flex` | all devices
+`d-inline` | `display: inline` | all devices
 `d-{device}-none` | `display: none` | apply media query
 `d-{device}-block` | `display: block` | apply media query
 `d-{device}-flex` | `display: flex` | apply media query
+`d-{device}-inline` | `display: inline` | apply media query
 <br><br>
 
   Property | Media Query

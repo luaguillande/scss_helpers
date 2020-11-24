@@ -1,11 +1,9 @@
 @import 'all';
+@import '_color_set'
 
 @include colors(
-    $primary:  #F9CD16,
-    $secondary: #3C3C3B,
-    $error: #ff5d48,
-    $white: #ffffff,
-    $black: #000000,
-    $info: #818181,
-    $softgrey: #EDEDED,
+    $primary:  $primary,
+    $secondary: $secondary,
+    $error: $error,
+    // ...
 )
