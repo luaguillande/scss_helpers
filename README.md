@@ -278,6 +278,7 @@ Vertical Align
 `align-center` | `align-items: center` | vertically centers the child element
 `align-flex-end` | `align-items: flex-end` | aligns the child element at the end of the parent element
 `align-stretch` | `align-items: stretch` | vertically distribute the child elements
+`align-baseline` | `align-items: baseline` | align the child elements in baseline
 
 <br><br>
 
@@ -286,7 +287,7 @@ Horizontal Align
   Class | Property | Details
 --- | --- | --- 
 `justify-center` | `justify-items: center` | horizontally centers the child element
-`justify-end` | `justify-items: end` | horizontally aligns the child element at the end of the parent element
+`justify-flex-end` | `justify-items: flex-end` | horizontally aligns the child element at the end of the parent element
 `justify-space-between` | `justify-items: space-between` | horizontally distribute the child elements
 `justify-space-around` | `justify-items: space-around` | horizontally distribute the child elements
 

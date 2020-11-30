@@ -22,7 +22,7 @@ $justifyList: space-between, flex-end, center, space-around;
 @include justify($justifyList...);
 
 
-$alignList: center, flex-end, stretch;
+$alignList: center, flex-end, stretch, baseline;
 
 @mixin align($align...) {
     @each $name in $align {
