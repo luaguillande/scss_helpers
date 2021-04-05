@@ -299,6 +299,10 @@ Horizontal Align
     <div class="flex wrap justify-space-around align-center">My Div</div>
   ```
   
+  
+## Normalize
+
+  This package includes the Normalize Library v8.0.1.
 
 ## Enjoy!
 
