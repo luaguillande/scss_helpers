@@ -6,9 +6,9 @@
             flex-wrap: $type;
         }
     }
-}
+};
 
-$typesList: 'wrap', 'no-wrap';
+$typesList: wrap, no-wrap;
 
 @include type('-', $typesList...);
 
