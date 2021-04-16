@@ -3,9 +3,9 @@
 @import '_color_set';
 
 
-@use 'scroll' with (
-    $primary:  $primary
-);
+$scroll-color: $primary;
+
+@import "node_modules/@luaguillande/scss_helpers/_scroll";
 
 @include colors(
     $primary:  $primary,

@@ -334,17 +334,17 @@ Horizontal Align
   You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
 
   ```scss
-  @use '@/node_modules/@luaguillande/scss_helpers/_scroll' with (
-    $primary:  $primary
-  );
+  $scroll-color: $primary;
+
+  @import "node_modules/@luaguillande/scss_helpers/_scroll";
   ```
 
   or
 
   ```scss
-  `@use '@/node_modules/@luaguillande/scss_helpers/_scroll' with (
-    $primary:  '#333',
-  );`
+  $scroll-color: '#333';
+
+  @import "node_modules/@luaguillande/scss_helpers/_scroll";
   ```
   
 <br><br>
