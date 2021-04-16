@@ -23,6 +23,8 @@
     @import '~@luaguillande/scss_helpers/_flexbox';
     @import '~@luaguillande/scss_helpers/_paddings';
     @import '~@luaguillande/scss_helpers/_margins';
+    @import '~@luaguillande/scss_helpers/_helpers';
+    @import '~@luaguillande/scss_helpers/normalize';
   ```
 
   2.2 Or import all the files
@@ -217,6 +219,7 @@ nothing | Aplies in all devices
 `font-700`| `font-weight: 700`
 `font-800`| `font-weight: 800`
 `font-900`| `font-weight: 900`
+
 <br><br>
 
 ## Display by Device
@@ -237,6 +240,7 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `d-{device}-block` | `display: block` | apply media query
 `d-{device}-flex` | `display: flex` | apply media query
 `d-{device}-inline` | `display: inline` | apply media query
+
 <br><br>
 
   Property | Media Query
