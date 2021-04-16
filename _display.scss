@@ -9,7 +9,7 @@
     }
 }
 
-$typesList: none, flex, block, inline;
+$typesList: none, flex, block, inline, inline-block, inline-flex, grid;
 
 @include type('-', $typesList...);
 
