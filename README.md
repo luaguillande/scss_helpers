@@ -304,26 +304,27 @@ Horizontal Align
   
   
 ## Helpers
-
+<br>
   ### Ellipsis for text-overflow.
+<br>
 
   Class | Property | Details
 --- | --- | --- 
 `ellipsis` | ```scss .ellipsis{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden }``` | Make truncate effect.
 
   
-<br><br>
+<br>
 
   Example:
 
   ```bash
     <div class="ellipsis">My Div</div>
   ```
-<br><br>
+<br>
 
   
   ### Scroll
-
+<br>
   You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
 
   ```scss
@@ -333,14 +334,14 @@ Horizontal Align
   ```
 
   or
-  
+
   ```scss
   `@use 'scroll' with (
     $primary:  '#333',
   );`
   ```
   
-
+<br><br>
 ## Normalize
 
   This package includes the Normalize Library v8.0.1.
