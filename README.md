@@ -309,7 +309,7 @@ Horizontal Align
 
   Class | Property | Details
 --- | --- | --- 
-`ellipsis` | ```css .ellipsis{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden }``` | Make truncate effect.
+`ellipsis` | ```scss .ellipsis{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden }``` | Make truncate effect.
 
   
 <br><br>
@@ -326,16 +326,19 @@ Horizontal Align
 
   You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
 
-  `@use 'scroll' with (
+  ```scss
+  @use 'scroll' with (
     $primary:  $primary
-  );`
+  );
+  ```
 
   or
-
+  
+  ```scss
   `@use 'scroll' with (
     $primary:  '#333',
   );`
-
+  ```
   
 
 ## Normalize
