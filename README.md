@@ -229,7 +229,10 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `d-none` | `display: none` | all devices
 `d-block` | `display: block` | all devices
 `d-flex` | `display: flex` | all devices
+`d-grid` | `display: grid` | all devices
 `d-inline` | `display: inline` | all devices
+`d-inline-flex` | `display: inline-flex` | all devices
+`d-inline-block` | `display: inline-block` | all devices
 `d-{device}-none` | `display: none` | apply media query
 `d-{device}-block` | `display: block` | apply media query
 `d-{device}-flex` | `display: flex` | apply media query
@@ -300,6 +303,41 @@ Horizontal Align
   ```
   
   
+## Helpers
+
+  ### Ellipsis for text-overflow.
+
+  Class | Property | Details
+--- | --- | --- 
+`ellipsis` | ```css .ellipsis{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden }``` | Make truncate effect.
+
+  
+<br><br>
+
+  Example:
+
+  ```bash
+    <div class="ellipsis">My Div</div>
+  ```
+<br><br>
+
+  
+  ### Scroll
+
+  You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
+
+  `@use 'scroll' with (
+    $primary:  $primary
+  );`
+
+  or
+
+  `@use 'scroll' with (
+    $primary:  '#333',
+  );`
+
+  
+
 ## Normalize
 
   This package includes the Normalize Library v8.0.1.

@@ -1,5 +1,11 @@
 @import 'all';
-@import '_color_set'
+@import '_scroll';
+@import '_color_set';
+
+
+@use 'scroll' with (
+    $primary:  $primary
+);
 
 @include colors(
     $primary:  $primary,
