@@ -1,6 +1,6 @@
 {
   "name": "@luaguillande/scss_helpers",
-  "version": "1.4.7",
+  "version": "1.4.9",
   "description": "Scss Helpers Lbrary is a toolkit of mixins and classes designated to help you to style your SCSS.",
   "main": "",
   "scripts": {

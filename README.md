@@ -317,7 +317,7 @@ Horizontal Align
 --- | --- | --- 
 `ellipsis` | ```scss .ellipsis{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden }``` | Make truncate effect.
 
-  
+  ]
 <br>
 
   Example:
@@ -334,7 +334,7 @@ Horizontal Align
   You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
 
   ```scss
-  @use 'scroll' with (
+  @use '@/node_modules/@luaguillande/scss_helpers/_scroll' with (
     $primary:  $primary
   );
   ```
@@ -342,7 +342,7 @@ Horizontal Align
   or
 
   ```scss
-  `@use 'scroll' with (
+  `@use '@/node_modules/@luaguillande/scss_helpers/_scroll' with (
     $primary:  '#333',
   );`
   ```
