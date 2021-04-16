@@ -309,6 +309,7 @@ Horizontal Align
   
 ## Helpers
 <br>
+
   ### Ellipsis for text-overflow.
 <br>
 
@@ -329,6 +330,7 @@ Horizontal Align
   
   ### Scroll
 <br>
+
   You can import the `_scroll.scss` in your `app.sccs` and set a color to make a beautiful scrollbar.
 
   ```scss
