@@ -239,7 +239,10 @@ Classes to change the `display` property. Use `d-{device}-{value}`
 `d-{device}-none` | `display: none` | apply media query
 `d-{device}-block` | `display: block` | apply media query
 `d-{device}-flex` | `display: flex` | apply media query
+`d-{device}-grid` | `display: grid` | all devices
 `d-{device}-inline` | `display: inline` | apply media query
+`d-{device}-inline-flex` | `display: inline-flex` | all devices
+`d-{device}-inline-block` | `display: inline-block` | all devices
 
 <br><br>
 
@@ -266,15 +269,29 @@ Classes to change the `display` property. Use `d-{device}-{value}`
   Classes to help the layout with `display:flex`
 
 <br><br>
-Use the `class="flex"` to apply the `display:flex` style.
+Use the `class="d-flex"` to apply the `display:flex` style.
 
 
 Wrapping
 
   Class | Property | Details
 --- | --- | --- 
-`wrap` | `flex-wrap: wrap` | breaks child elements into new lines when space runs out
-`no-wrap` | `flex-wrap: nowrap` | keeps child elements on the same line, even if there is no space
+`flex-wrap` | `flex-wrap: wrap` | breaks child elements into new lines when space runs out
+`flex-no-wrap` | `flex-wrap: nowrap` | keeps child elements on the same line, even if there is no space
+`flex-{device}-wrap` | `display: flex` | apply media query
+`flex-{device}-no-wrap` | `display: inline` | apply media query
+
+<br><br>
+
+  Property | Media Query
+--- | --- 
+`xs` | `max-width  420px`
+`sm` | `min-width  421px`
+`md` | `min-width 800px`
+`lg` | `min-width 1025px`
+`xl` | `min-width 1601px`
+
+
 
 <br><br>
 
@@ -303,7 +320,7 @@ Horizontal Align
   Example:
 
   ```bash
-    <div class="flex wrap justify-space-around align-center">My Div</div>
+    <div class="d-flex flex-wrap justify-space-around align-center">My Div</div>
   ```
   
   
@@ -328,6 +345,12 @@ Horizontal Align
 <br>
 
   
+  ### Smooth Scroll
+<br>
+
+  The `_helpers.scss` file includes a smooth scroll set tho the scroll behavior.
+<br>
+
   ### Scroll
 <br>
 
